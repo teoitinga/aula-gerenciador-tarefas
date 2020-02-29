@@ -1,6 +1,6 @@
 <h1>Tarefas</h1>
 
-<table class="table table-striped table-bordered table-hover">
+  <table class="table table-striped table-bordered table-hover">
   <tbody>
     <tr>
     	<th>Tarefa</th>
@@ -13,15 +13,16 @@
         </a>
     </th>
     </tr>
-    <tr>
-      <td>
-        
+    <tr *ngFor="let tarefa of tarefas">
+      <td [class.success]="!tarefa.concluida">
+        {{tarefa.name}}
       </td>
-      <td style="width: 70px" class="text-center">
+      
+      <td style="width: 70px" class="text-center" [class.success]="!tarefa.concluida">
         <input 
-          type="checkbox">
+          type="checkbox" [value]="tarefa.id" [checked]="tarefa.concluida">
       </td>
-      <td class="text-center" style="width: 200px">
+      <td class="text-center" style="width: 200px" [class.success]="!tarefa.concluida">
         <a 
           title="Editar" alt="Editar"
           class="btn btn-xs btn-info">
@@ -39,5 +40,5 @@
   </tbody>
 </table>
 
-<p>Nenhuma tarefa cadastrada.</p>
+<p *ngIf="tarefas.length==0" >Nenhuma tarefa cadastrada.</p>
 
