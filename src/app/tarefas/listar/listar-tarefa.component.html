@@ -6,7 +6,7 @@
     	<th>Tarefa</th>
       <th>Concluída</th>
     	<th class="text-center">
-        <a 
+        <a  [routerLink]="['/tarefas/cadastrar']"
            class="btn btn-xs btn-success">
            <span class="glyphicon glyphicon-plus" 
              aria-hidden="true"></span> Novo
@@ -23,7 +23,7 @@
           type="checkbox" [value]="tarefa.id" [checked]="tarefa.concluida">
       </td>
       <td class="text-center" style="width: 200px" [class.success]="!tarefa.concluida">
-        <a 
+        <a   [routerLink]="['/tarefas/editar', tarefa.id]"
           title="Editar" alt="Editar"
           class="btn btn-xs btn-info">
           <span class="glyphicon glyphicon-pencil" 
