@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListarTarefaComponent } from './listar-tarefa.component';
+import { ListarTarefaComponent } from "./ListarTarefaComponent";
 
 describe('ListarTarefaComponent', () => {
   let component: ListarTarefaComponent;

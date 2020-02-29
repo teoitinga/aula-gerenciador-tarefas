@@ -1,8 +1,10 @@
-import { AppRoutingModule } from './app-routing.module';
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { TarefasModule } from './tarefas';
 
 @NgModule({
@@ -11,8 +13,10 @@ import { TarefasModule } from './tarefas';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    TarefasModule
+    FormsModule,
+    HttpClientModule,
+    TarefasModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Tarefa } from './tarefa.model';
+import { Tarefa } from './';
 
 @Injectable({
   providedIn: 'root'

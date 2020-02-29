@@ -1,6 +1,7 @@
-import { TarefaRoutes } from './tarefas';
-import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from '@angular/router';
+
+import { TarefaRoutes } from './tarefas';
 
 export const routes: Routes = [
     {
@@ -11,7 +12,11 @@ export const routes: Routes = [
     ...TarefaRoutes
 ];
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    imports: [
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
 })
 export class AppRoutingModule{}
